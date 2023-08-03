@@ -1,0 +1,209 @@
+/* definging dynamic variables */
+
+:root {
+  --main-bg-color: #1e1e1e;
+  --main-primary-color: #e9dcff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* write your CSS here */ /*ok :)*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--main-bg-color);
+  color: #fff;
+  position: relative;
+}
+/* container */
+.container {
+  width: 1200px;
+  margin: auto;
+}
+/* nav design starts here */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px;
+}
+.nav>.logo{
+    text-align: center;
+    cursor: pointer;
+}
+.menubar{
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+    
+}
+.menubar>li{
+    padding: 0 30px;
+    cursor: pointer;
+}
+.menubar>li:hover{
+    color: var(--main-primary-color);
+}
+
+.btn{
+    padding: 10px 30px;
+    outline: none;
+    border: none;
+    background-color: var(--main-primary-color);
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    
+}
+.btn:hover{
+    background: #000;
+    color: var(--main-primary-color);
+}
+
+.hamburger{
+    display: none;
+}
+.mobile_menu{
+    position: fixed;
+    top: 0;
+    left:-10000000000px;
+    width: 0;
+    height: 100vh;
+    background: var(--main-bg-color);
+    z-index: 9000;
+    padding: 30px;
+}
+.top_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.mobile_menu>ul{
+    margin-top: 40px;
+}
+.mobile_menu>ul>li{
+    list-style: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .5s;
+
+}
+
+.mobile_menu>ul>li:hover{
+    background-color: var(--main-primary-color);
+    color: var(--main-bg-color);
+
+}
+.close_btn{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.close_btn>img{
+    width: 100%;
+    height: 100%;
+}
+/* nav design ends here */
+/* hero area design starts here */
+
+.hero_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.subtitle{
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--main-primary-color);
+    margin: 20px 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+
+}
+
+.title{
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+.download_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.download_btn>img{
+    width: 20px;height: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.download_btn>img:hover{
+    color: var(--main-primary-color);
+}
+.right_area{
+    width: 40vw;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.right_area>img{
+    width: 100%;
+}
+/* hero area design ends here */
+
+/* responsive design */
+/* for mobile devices only */
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 90vw;
+    }
+    .menubar{
+        display: none;
+    }
+    .action_btns{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        user-select: none;
+    }
+    .hero_area{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+    }
+    .title{
+        font-size: 50px;
+        font-weight: 600;
+        width: 400px;
+        letter-spacing: 2px;
+    }
+    .download_btn{
+        margin: 10px 0;
+    }
+    .right_area{
+        width: 80vw;
+        overflow: hidden;
+        margin: 50px auto;
+    }
+
+    .right_area>img{
+        width: 90vw;
+    }
+}
